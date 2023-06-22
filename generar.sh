@@ -9,6 +9,9 @@ tipo=$2
 url=https://source.unsplash.com/random/900%C3%97700/?$tipo
 mkdir ./tmp
 
+lista="dict.csv"
+echo $lista
+
 for ((i=0; i<cantidad; i++)); do
     contador=$(($i+1))
     nombre_archivo="imagen_$contador.jpg"
