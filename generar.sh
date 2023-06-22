@@ -10,9 +10,8 @@ directorio=/tmp
 
 url=https://source.unsplash.com/random/900%C3%97700/?$tipo
 
-for ((i=1; [ i -gr cantidad - 1 ] ; i++)); do
+for ((i=0; i<cantidad; i++)); do
     nombre_archivo="imagen_$contador.jpg"
     wget -P "$directorio" -O "$nombre_archivo" "$url"
-    echo "$url"
     contador=$((contador+1))
 done
