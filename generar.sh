@@ -21,7 +21,7 @@ for ((i=0; i<cantidad; i++)); do
 done
 
 tar -cvf comprimido.tar tmp
-
+sha256sum comprimido.tar | cut -d " " -f 1 > sumaverif
 rm -rf ./tmp
 
 exit 0
