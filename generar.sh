@@ -20,4 +20,9 @@ done
 
 tar -cvf comprimido.tar tmp
 
+rm -rf ./tmp
+
 exit 0
+
+
+
