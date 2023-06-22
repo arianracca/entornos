@@ -13,8 +13,9 @@ lista="dict.csv"
 echo $lista
 
 for ((i=0; i<cantidad; i++)); do
+    nombre=sort -R dict.csv | head -n 1
     contador=$(($i+1))
-    nombre_archivo="imagen_$contador.jpg"
+    nombre_archivo="$nombre.jpg"
     wget -O "$nombre_archivo" "$url"
     mv "$nombre_archivo" ./tmp/
     echo "se creo $nombre_archivo correctamente"
