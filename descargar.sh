@@ -6,9 +6,9 @@
 archivo="$1"
 sumaverif="$2"
 key="$(sha256sum "$archivo" | cut -d " " -f 1)"
-echo "$key"
+sum="$(cat $sumaverif)"
 
-if [ "$key" == "$sumaverif" ]; then
+if [ "$key" == "$sum" ]; then
     tar -xvf "$archivo" && exit 0
 else
     echo "No se pudo descomprimir" && exit 3
