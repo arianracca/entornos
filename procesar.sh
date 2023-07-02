@@ -6,7 +6,7 @@ for file in *.jpg; do
     primer_letra=${nombre:0:1}  # Obtenemos la primera letra del nombre
     
     if [[ $primer_letra =~ [A-Z] ]]; then
-        echo "$nombre es un nombre"
+        convert $file -gravity center -resize 512x512+0+0 \ -extent 512x512 $file
     else
         echo "$nombre no es un nombre"
     fi
