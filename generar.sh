@@ -10,8 +10,7 @@ url=https://source.unsplash.com/random/900%C3%97700/?$tipo
 mkdir ./tmp
 
 for ((i=0; i<cantidad; i++)); do
-    nombre=$(sort -R ./dict.csv | head -n 1 | cut -d "," -f 1)
-    nombre=${nombre^}
+    nombre=$(sort -R ./dict.txt | head -n 1 | cut -d "," -f 1)
     contador=$(($i+1))
     nombre_archivo="$nombre.jpg"
     wget -O "$nombre_archivo" "$url"
