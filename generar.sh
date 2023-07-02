@@ -1,12 +1,11 @@
 #!/bin/bash
 
 [ $# -eq 0 ] && exit 1 #no se recibieron argumentos
-[ $# -gt 2 ] && exit 2 #se recibio mas de un argumento
+[ $# -gt 1 ] && exit 2 #se recibio mas de un argumento
 
 cantidad=$1
-tipo=$2
 
-url=https://source.unsplash.com/random/900%C3%97700/?$tipo
+url=https://source.unsplash.com/random/900%C3%97700/?person
 mkdir ./tmp
 
 for ((i=0; i<cantidad; i++)); do
@@ -24,6 +23,3 @@ sha256sum comprimido.tar | cut -d " " -f 1 > sumaverif
 rm -rf ./tmp
 
 exit 0
-
-
-
