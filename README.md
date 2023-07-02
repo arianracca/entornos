@@ -5,5 +5,4 @@ Trabajo grupal para entornos de programacion de la TUIA en la UNR
 
 Arian Racca;
 Amanda Tardugno;
-Sofia Grando;
 
