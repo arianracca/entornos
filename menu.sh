@@ -7,7 +7,8 @@ function mostrar_menu {
     echo "1. Generar imágenes"
     echo "2. Descargar archivo comprimido"
     echo "3. Procesar imágenes"
-    echo "4. Salir"
+    echo "4. Comprimir imágenes"
+    echo "5. Salir"
     echo
 
     read -p "Ingrese el número de la opción deseada: " opcion
@@ -45,6 +46,13 @@ function mostrar_menu {
             ;;
 
         4)
+            # Ejecutar el script "comprimir.sh"
+            #cd personasimg Ojo que el script comprimir.sh ya entra en personasimg
+            ./comprimir.sh
+            #cd ..
+            ;;
+
+        5)
             # Salir del script
             echo "Saliendo del programa."
             exit 0
@@ -62,4 +70,3 @@ function mostrar_menu {
 
 # Mostrar el menú inicial
 mostrar_menu
-
