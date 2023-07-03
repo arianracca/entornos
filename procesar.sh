@@ -1,6 +1,8 @@
 #!/bin/bash
 
+rm -rf personasimg 2>/dev/null
 mkdir personasimg 2>/dev/null
+
 cd tmp
 for file in *.jpg; do
     nombre=${file%.jpg}  # Eliminamos la extensión .jpg del nombre del archivo
@@ -23,3 +25,7 @@ for file in *.jpg; do
         echo "$nombre no es un nombre"
     fi
 done
+
+cd ..
+rm -rf tmp 2>/dev/null
+rmdir tmp 2>/dev/null
