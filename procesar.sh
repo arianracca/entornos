@@ -25,3 +25,7 @@ for file in *.jpg; do
         echo "$nombre no es un nombre"
     fi
 done
+
+cd ..
+rm -rf tmp 2>/dev/null
+rmdir tmp 2>/dev/null
