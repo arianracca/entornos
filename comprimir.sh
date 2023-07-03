@@ -26,6 +26,7 @@ for file in *.jpg; do
         ((total_personas++))
         ((total_femeninas++))
     else
+        echo "$nombre" >> "$archivo_personas"
         ((total_personas++))
         ((total_masculinas++))
     fi
