@@ -30,6 +30,9 @@ function mostrar_menu {
 
             # Ejecutar el script "generar.sh" con los argumentos proporcionados
             ./generar.sh "$cantidad"
+            echo "Presione Enter para volver al menú."
+            read
+            mostrar_menu
             ;;
 
         2)
@@ -38,17 +41,26 @@ function mostrar_menu {
             # de que los scripts anteriores personalicen nombres en el proceso
             # al menos en esta primera versión.
             ./descargar.sh comprimido.tar sumaverif
+            echo "Presione Enter para volver al menú."
+            read
+            mostrar_menu
             ;;
 
          3)
             # Ejecutar el script "procesar.sh"
             ./procesar.sh
+            echo "Presione Enter para volver al menú."
+            read
+            mostrar_menu
             ;;
 
         4)
             # Ejecutar el script "comprimir.sh"
-            #cd personasimg Ojo que el script comprimir.sh ya entra en personasimg
+            #cd personasimg ! Ojo que el script comprimir.sh ya entra en personasimg
             ./comprimir.sh
+            echo "Presione Enter para volver al menú."
+            read
+            mostrar_menu
             #cd ..
             ;;
 
