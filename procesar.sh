@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf ./personasimg 2>/dev/null
+rm -rf personasimg 2>/dev/null
 mkdir personasimg 2>/dev/null
 
 cd tmp
