@@ -1,6 +1,8 @@
 #!/bin/bash
 
+rm -rf ./personasimg 2>/dev/null
 mkdir personasimg 2>/dev/null
+
 cd tmp
 for file in *.jpg; do
     nombre=${file%.jpg}  # Eliminamos la extensión .jpg del nombre del archivo
