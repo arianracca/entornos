@@ -6,7 +6,8 @@ function mostrar_menu {
     echo "Menú de Scripts"
     echo "1. Generar imágenes"
     echo "2. Descargar archivo comprimido"
-    echo "3. Salir"
+    echo "3. Procesar imágenes"
+    echo "4. Salir"
     echo
 
     read -p "Ingrese el número de la opción deseada: " opcion
@@ -38,7 +39,12 @@ function mostrar_menu {
             ./descargar.sh comprimido.tar sumaverif
             ;;
 
-        3)
+         3)
+            # Ejecutar el script "procesar.sh"
+            ./procesar.sh
+            ;;
+
+        4)
             # Salir del script
             echo "Saliendo del programa."
             exit 0
