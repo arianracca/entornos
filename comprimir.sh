@@ -30,3 +30,13 @@ for file in *.jpg; do
         ((total_masculinas++))
     fi
 done
+
+echo "Total de personas: $total_personas" >> "$archivo_personas"
+echo "Total de personas femeninas: $total_femeninas" >> "$archivo_personas"
+echo "Total de personas masculinas: $total_masculinas" >> "$archivo_personas"
+
+cd ..
+
+tar -czvf "$archivo_comprimido" personasimg
+
+rm -rf personasimg
