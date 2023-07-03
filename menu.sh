@@ -56,12 +56,10 @@ function mostrar_menu {
 
         4)
             # Ejecutar el script "comprimir.sh"
-            #cd personasimg ! Ojo que el script comprimir.sh ya entra en personasimg
             ./comprimir.sh
             echo "Presione Enter para volver al menú."
             read
             mostrar_menu
-            #cd ..
             ;;
 
         5)
