@@ -1,17 +1,17 @@
 # Dockerfile
 
 # Utilizar una imagen base de Lubuntu
-FROM lubuntu:latest
+FROM ubuntu:latest
 
 # Actualizar los paquetes del sistema operativo e instalar las dependencias necesarias
 RUN apt-get update && \
-    apt-get install -y wget tar imagemagick sleep
+    apt-get install -y wget tar imagemagick
 
 # Crear el directorio de trabajo
 RUN mkdir /entornosapp
 
 # Copiar los scripts al directorio /entornosapp dentro del contenedor
-COPY generar.sh descargar.sh procesar.sh comprimir.sh menu.sh /entornosapp/
+COPY README.md dict.txt generar.sh descargar.sh procesar.sh comprimir.sh menu.sh /entornosapp/
 
 # Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /entornosapp
