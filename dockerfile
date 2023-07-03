@@ -1,18 +1,23 @@
-# Establece la imagen base de Docker que utilizarás
-FROM ubuntu:latest
+# Dockerfile
 
-# Copia los scripts de bash al contenedor
-COPY generar.sh /entornosapp/
-COPY descargar.sh /entornosapp/
-COPY procesar.sh /entornosapp/
-COPY comprimir.sh /entornosapp/
-COPY menu.sh /entornosapp/
+# Utilizar una imagen base de Lubuntu
+FROM lubuntu:latest
 
-# Establece el directorio de trabajo
+# Actualizar los paquetes del sistema operativo e instalar las dependencias necesarias
+RUN apt-get update && \
+    apt-get install -y wget tar imagemagick sleep
+
+# Crear el directorio de trabajo
+RUN mkdir /entornosapp
+
+# Copiar los scripts al directorio /entornosapp dentro del contenedor
+COPY generar.sh descargar.sh procesar.sh comprimir.sh menu.sh /entornosapp/
+
+# Establecer el directorio de trabajo dentro del contenedor
 WORKDIR /entornosapp
 
-# Establece los permisos de ejecución para los scripts
-RUN chmod +rxw generar.sh descargar.sh procesar.sh comprimir.sh menu.sh
+# Dar permisos de lectura, escritura y ejecución al propietario del archivo
+RUN chmod u+rwx generar.sh descargar.sh procesar.sh comprimir.sh menu.sh
 
-# Define el comando por defecto a ejecutar cuando el contenedor se inicie
+# Ejecutar el script de menú por defecto al iniciar el contenedor
 CMD ["./menu.sh"]
