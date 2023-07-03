@@ -5,7 +5,7 @@ function mostrar_menu {
     clear
     echo "Menú de Scripts"
     echo "1. Generar imágenes"
-    echo "2. Otro script"
+    echo "2. Descargar archivo comprimido"
     echo "3. Salir"
     echo
 
@@ -31,11 +31,11 @@ function mostrar_menu {
             ;;
 
         2)
-            # Lógica para otro script
-            echo "Funcionalidad de otro script"
-            echo "Presione Enter para volver al menú."
-            read
-            mostrar_menu
+            # Ejecutar el script "descargar.sh" con los argumentos por defecto
+            # Se optó por no permitir otras variantes debido a que no hay posibilidad
+            # de que los scripts anteriores personalicen nombres en el proceso
+            # al menos en esta primera versión.
+            ./descargar.sh comprimido.tar sumaverif
             ;;
 
         3)
@@ -56,3 +56,4 @@ function mostrar_menu {
 
 # Mostrar el menú inicial
 mostrar_menu
+
