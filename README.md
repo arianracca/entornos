@@ -1,25 +1,17 @@
 # EntornosApp
 
-Trabajo grupal para entornos de programacion de la TUIA en la UNR
+Trabajo grupal para Entornos de Programacion de la TUIA en la UNR
 
-## Participantes
+## Integrantes
 
 - Arian Racca
 - Amanda Tardugno
 
-######################################
-
 ## Aplicación de Procesamiento de Imágenes
-
-######################################
 
 Esta aplicación de procesamiento de imágenes está diseñada para realizar diferentes tareas en imágenes, como descargar, procesar, comprimir y administrar la lista de personas presentes en las imágenes.
 
-######################################
-
 ## Ejecución con Docker
-
-######################################
 
 - Asegúrate de tener instalado Docker en tu sistema.
 
@@ -41,11 +33,7 @@ Esta aplicación de procesamiento de imágenes está diseñada para realizar dif
 
 - Antes de cerrar el programa (opcion 5), se debe ejecutar en el mismo directorio el script ***docker.sh*** para copiar el resultado del contenedor al host.
 
-######################################
-
 ## Scripts
-
-######################################
 
 ---------------
 
