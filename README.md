@@ -1,4 +1,4 @@
-# entornos
+# Entornos de programacion
 Trabajo grupal para entornos de programacion de la TUIA en la UNR
 
 ## Participantes
@@ -11,6 +11,7 @@ Amanda Tardugno;
 Ejecutar en docker corriendo los comandos:
 
 sudo docker build -t entornosapp .
+
 sudo docker run --rm -it entornosapp
 
 A continuacion se ejecuta el menu.
