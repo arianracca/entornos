@@ -5,5 +5,4 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ./entornosapp:/home/entornosapp  # Monta el directorio local 'entornosapp' en '/home/entornosapp' del contenedor
-    command: tail -f /dev/null  # Evita que el contenedor se cierre inmediatamente
+      - $HOME/entornosapp:/home/entornosapp  # Monta el directorio local 'entornosapp' en '/home/entornosapp' del contenedor

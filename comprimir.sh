@@ -41,5 +41,8 @@ cd ..
 tar -czvf "$archivo_comprimido" personasimg
 
 mv "$archivo_comprimido" ..
+#xdg-open "$(dirname "$archivo_comprimido")"
+#ubicacion="$(dirname "$archivo_comprimido")"
+#echo "$ubicacion"
 
-rm -rf personasimg
+#rm -rf personasimg
