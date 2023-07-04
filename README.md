@@ -11,7 +11,7 @@ Trabajo grupal para Entornos de Programacion de la TUIA en la UNR
 
 Esta aplicación de procesamiento de imágenes está diseñada para realizar diferentes tareas en imágenes, como descargar, procesar, comprimir y administrar la lista de personas presentes en las imágenes.
 
-## Ejecución con Docker
+## Modo de uso con Docker
 
 - Asegúrate de tener instalado Docker en tu sistema.
 
