@@ -14,7 +14,7 @@ WORKDIR /home/entornosapp
 # Copiar los scripts desde el origen al directorio /home/entornosapp dentro del contenedor
 COPY . .
 
-# Dar permisos de lectura, escritura y ejecución al propietario del archivo
+# Dar permisos de lectura, escritura y ejecución
 RUN chmod +rwx generar.sh descargar.sh procesar.sh comprimir.sh menu.sh
 
 # Ejecutar el script de menú por defecto al iniciar el contenedor
