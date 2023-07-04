@@ -41,5 +41,3 @@ cd ..
 tar -czvf "$archivo_comprimido" personasimg
 
 mv "$archivo_comprimido" ..
-
-rm -rf personasimg

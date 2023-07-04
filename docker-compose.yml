@@ -1,0 +1,8 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - $HOME/entornosapp:/home/entornosapp  # Monta el directorio local 'entornosapp' en '/home/entornosapp' del contenedor
